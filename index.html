@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <input type="text" id="Resultat" value="" />
+      </div>
+      <div class="container">
+        <button id="1" onclick="Afficher(1)">1</button>
+        <button id="2" onclick="Afficher(2)">2</button>
+        <button id="3" onclick="Afficher(3)">3</button>
+        <button id="plus" onclick="Afficher('+')">+</button>
+        <button id="4" onclick="Afficher(4)">4</button>
+        <button id="5" onclick="Afficher(5)">5</button>
+        <button id="6" onclick="Afficher(6)">6</button>
+        <button id="moins" onclick="Afficher('-')">-</button>
+        <button id="7" onclick="Afficher(7)">7</button>
+        <button id="8" onclick="Afficher(8)">8</button>
+        <button id="9" onclick="Afficher(9)">9</button>
+        <button id="multi" onclick="Afficher('*')">*</button>
+        <button id="supp" onclick="supp()">c</button>
+        <button id="num0" onclick="Afficher(0)">0</button>
+        <button id="point" onclick="Afficher('.')">.</button>
+        <button id="egal" onclick="chang()">=</button>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    let Res = " ";
+    let main = document.getElementById("Resultat");
+    function Afficher(num) {
+      Res = Res + num;
+      main.value = Res;
+    }
+    function chang() {
+      main.value = eval(Res);
+      Res = eval(Res);
+    }
+    function supp() {
+      main.value = " ";
+      Res = " ";
+    }
+  </script>
+</html>
